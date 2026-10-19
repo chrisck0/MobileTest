@@ -13,7 +13,24 @@
     {
       "Id": 103,
       "Name": "Eagle",
-      "Health": 1000
+      "Health": 500
+    }
+  ],
+  "WeaponData": [
+    {
+      "Id": 101,
+      "Name": "Sparrow",
+      "Health": 100
+    },
+    {
+      "Id": 102,
+      "Name": "Raven",
+      "Health": 300
+    },
+    {
+      "Id": 103,
+      "Name": "Eagle",
+      "Health": 500
     }
   ]
 }

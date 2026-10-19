@@ -21,4 +21,4 @@ MonoBehaviour:
     Health: 300
   - Id: 103
     Name: Eagle
-    Health: 1000
+    Health: 500
