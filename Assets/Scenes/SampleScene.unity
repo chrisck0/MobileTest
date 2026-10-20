@@ -899,8 +899,60 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4558151327987852364, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6231704382360749910}
+    - targetCorrespondingSourceObject: {fileID: 4558151327987852364, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6231704382360749909}
   m_SourcePrefab: {fileID: 100100000, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+--- !u!114 &6231704382360749907 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 73191376797659949, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+  m_PrefabInstance: {fileID: 6231704382360749906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231704382360749908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adaba1e7fb434504a90665f11a9ec9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+--- !u!1 &6231704382360749908 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4558151327987852364, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+  m_PrefabInstance: {fileID: 6231704382360749906}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6231704382360749909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231704382360749908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed99cb4a9d6a86a40b63e04d16d68de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobilePress
+  _pressAction: {fileID: -5255483080562251131, guid: 12be712dc2934b848b041727f2ac5a10, type: 3}
+--- !u!114 &6231704382360749910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231704382360749908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509a0961d52883f4f84077886be18f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementMobile
+  _touchPositionAction: {fileID: 8309339404829063157, guid: 12be712dc2934b848b041727f2ac5a10, type: 3}
+  _playerMovement: {fileID: 6231704382360749907}
+  _mobilePress: {fileID: 6231704382360749909}
+  _minThreshold: 50
+  _maxThreshold: 200
 --- !u!1001 &7993715348235483014
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -38,4 +38,12 @@ public class PlayerMovement : MonoBehaviour
         _moveInput.action.performed -= OnMove;
         _moveInput.action.canceled -= OnMove;
     }
+
+    /// <summary>
+    /// PlayerMovementMobile에서 방향 설정
+    /// </summary>
+    public void SetDirection(Vector3 direction)
+    {
+        _direction = direction;
+    }
 }
