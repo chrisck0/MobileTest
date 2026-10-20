@@ -832,6 +832,10 @@ PrefabInstance:
       propertyPath: _moveInput
       value: 
       objectReference: {fileID: 5790529197171709121, guid: 12be712dc2934b848b041727f2ac5a10, type: 3}
+    - target: {fileID: 1425922040631992011, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1427735367, guid: c5c18138326f9464b99cfe28b54804b1, type: 3}
     - target: {fileID: 1634664488444357292, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
       propertyPath: m_Radius
       value: 0.75
@@ -839,6 +843,10 @@ PrefabInstance:
     - target: {fileID: 1634664488444357292, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1775690742131916763, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2051033331175018041, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
       propertyPath: m_LocalPosition.x
