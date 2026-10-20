@@ -9,40 +9,70 @@ public class PlayerVisual : MonoBehaviour
     [SerializeField] private Animator _animator;
     [SerializeField] private InputActionReference _moveInput;
     [SerializeField] private Transform _playerVisualTransform;
-
+    
+    [SerializeField] private PlayerMovement _playerMovement;
+    
     //---------------
-    private void OnEnable() => BindInputActions();
-    private void OnDisable() => UnbindInputActions();
+    // private void OnEnable() => BindInputActions();
+    // private void OnDisable() => UnbindInputActions();
     //---------------
 
-    private void OnMove(InputAction.CallbackContext context)
+    private void Update() => UpdateVisual(_playerMovement.Direction);
+    
+    // private void OnMove(InputAction.CallbackContext context)
+    // {
+    //     Vector2 direction = context.ReadValue<Vector2>();
+    //
+    //     if (direction == Vector2.zero) _animator.SetBool(_isWalkingId, false);
+    //     else _animator.SetBool(_isWalkingId, true);
+    //
+    //     if (direction.x < 0)
+    //     {
+    //         _playerVisualTransform.rotation = Quaternion.identity;
+    //     }
+    //     else if (direction.x > 0)
+    //     {
+    //         _playerVisualTransform.eulerAngles = new Vector3(0f, 180f, 0f);
+    //     }
+    // }
+
+    // private void BindInputActions()
+    // {
+    //     _moveInput.action.Enable();
+    //     _moveInput.action.performed += OnMove;
+    //     _moveInput.action.canceled += OnMove;
+    // }
+    //
+    // private void UnbindInputActions()
+    // {
+    //     _moveInput.action.Disable();
+    //     _moveInput.action.performed -= OnMove;
+    //     _moveInput.action.canceled -= OnMove;
+    // }
+    
+    private void UpdateVisual(Vector3 direction)
     {
-        Vector2 direction = context.ReadValue<Vector2>();
+        UpdateMoving(direction);
+        UpdateDirection(direction);
+    }
 
-        if (direction == Vector2.zero) _animator.SetBool(_isWalkingId, false);
-        else _animator.SetBool(_isWalkingId, true);
+    private void UpdateMoving(Vector3 direction)
+    {
+        // 방향 벡터가 0보다 크다 → 입력이 있다. 0인지만 체크 필요하므로 sqr 사용.
+        bool isMoving = direction.sqrMagnitude > 0.01f;
+        
+        _animator.SetBool(_isWalkingId, isMoving);
+    }
 
-        if (direction.x < 0)
+    private void UpdateDirection(Vector3 direction)
+    {
+        if (direction.x < 0f)
         {
             _playerVisualTransform.rotation = Quaternion.identity;
         }
-        else if (direction.x > 0)
+        else if (direction.x > 0f)
         {
             _playerVisualTransform.eulerAngles = new Vector3(0f, 180f, 0f);
         }
-    }
-
-    private void BindInputActions()
-    {
-        _moveInput.action.Enable();
-        _moveInput.action.performed += OnMove;
-        _moveInput.action.canceled += OnMove;
-    }
-
-    private void UnbindInputActions()
-    {
-        _moveInput.action.Disable();
-        _moveInput.action.performed -= OnMove;
-        _moveInput.action.canceled -= OnMove;
     }
 }

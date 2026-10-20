@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private InputActionReference _moveInput;
     private Vector3 _direction;
 
+    /// <summary>
+    /// PlayerVisual에서 _direction을 받아 조건 체크에 사용 
+    /// </summary>
+    public Vector3 Direction => _direction;
+    
     //---------------
     private void OnEnable() => BindInputActions();
     private void Update() => Move();
