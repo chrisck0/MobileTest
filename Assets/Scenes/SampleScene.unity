@@ -828,6 +828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 73191376797659949, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+      propertyPath: _moveInput
+      value: 
+      objectReference: {fileID: 5790529197171709121, guid: 12be712dc2934b848b041727f2ac5a10, type: 3}
     - target: {fileID: 1634664488444357292, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
       propertyPath: m_Radius
       value: 0.75
@@ -880,6 +884,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bird
       objectReference: {fileID: 0}
+    - target: {fileID: 5107720716836665570, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
+      propertyPath: _playerMovement
+      value: 
+      objectReference: {fileID: 6231704382360749907}
     - target: {fileID: 8959478968484847131, guid: 73bfb5eb97666094cae43592751f9105, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5

@@ -26,8 +26,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1775690742131916763}
   - {fileID: 7055227208621719116}
@@ -48,6 +48,8 @@ GameObject:
   - component: {fileID: 73191376797659949}
   - component: {fileID: 6964443785336831210}
   - component: {fileID: 5107720716836665570}
+  - component: {fileID: 983311043997532968}
+  - component: {fileID: 8346910999707043930}
   m_Layer: 0
   m_Name: Bird
   m_TagString: Untagged
@@ -91,7 +93,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 0.75
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &3002608339914041066
 Rigidbody:
@@ -179,6 +181,37 @@ MonoBehaviour:
   _animator: {fileID: 4140942366751978486}
   _moveInput: {fileID: 5790529197171709121, guid: 12be712dc2934b848b041727f2ac5a10, type: 3}
   _playerVisualTransform: {fileID: 8959478968484847131}
+  _playerMovement: {fileID: 73191376797659949}
+--- !u!114 &983311043997532968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4558151327987852364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 509a0961d52883f4f84077886be18f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovementMobile
+  _touchPositionAction: {fileID: 8309339404829063157, guid: 12be712dc2934b848b041727f2ac5a10, type: 3}
+  _playerMovement: {fileID: 73191376797659949}
+  _mobilePress: {fileID: 8346910999707043930}
+  _minThreshold: 50
+  _maxThreshold: 200
+--- !u!114 &8346910999707043930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4558151327987852364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed99cb4a9d6a86a40b63e04d16d68de5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MobilePress
+  _pressAction: {fileID: -5255483080562251131, guid: 12be712dc2934b848b041727f2ac5a10, type: 3}
 --- !u!1 &5308820903020348611
 GameObject:
   m_ObjectHideFlags: 0
